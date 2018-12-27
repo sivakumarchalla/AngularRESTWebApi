@@ -1,0 +1,143 @@
+
+<div class="main-container">
+    <button class="navbtn"  mat-raised-button color="salmon" routerLink="/view" >Student Details</button> 
+<mat-card class="matcard-setting">
+  <mat-card-title class="registration-title">
+    Student Registration Form 
+  </mat-card-title>
+
+  <mat-card-content>
+      <form class="registrationform" [formGroup]="studentForm" (ngSubmit)="save()">
+ <table class="registration-table">
+              <tr>
+    <td>
+        <mat-form-field class="demo-full-width">  
+            <input formControlName="firstName" matInput placeholder="First Name">  
+        </mat-form-field> 
+        <mat-error>  
+            <span *ngIf="!studentForm.get('firstName').valid && studentForm.get('firstName').touched">first name requride</span>  
+        </mat-error>  
+    </td>
+  </tr>
+    <tr>
+        <td>  
+            <mat-form-field class="demo-full-width">  
+                <input formControlName="lastName" matInput placeholder="Last Name">  
+            </mat-form-field>  
+            <mat-error>  
+                <span *ngIf="!studentForm.get('lastName').valid && studentForm.get('lastName').touched">first name requride</span>  
+            </mat-error>  
+        </td>  
+   </tr>
+   <tr>  
+      <td>  
+          <mat-form-field class="demo-full-width">  
+              <input formControlName="email" matInput placeholder="Email">  
+              <mat-hint>use like : demo@demo.com</mat-hint>  
+              <mat-error>  
+                  <span *ngIf="!studentForm.get('email').valid && studentForm.get('email').touched">invalid Email</span>  
+              </mat-error>  
+          </mat-form-field>  
+      </td>  
+  </tr>
+  <tr>  
+      <td>  
+          <mat-form-field class="demo-full-width">  
+              <input formControlName="password" matInput placeholder="Password">  
+              <mat-error>  
+                  <span *ngIf="!studentForm.get('password').valid && studentForm.get('Password').touched">invalid Password</span>  
+              </mat-error>  
+          </mat-form-field>  
+      </td>  
+  </tr>
+  <tr>  
+      <td>  
+          <mat-form-field class="demo-full-width">  
+              <input formControlName="age" matInput placeholder="Age">  
+              <mat-error>  
+                  <span *ngIf="!studentForm.get('age').valid && studentForm.get('age').touched">age required</span>  
+              </mat-error>  
+          </mat-form-field>  
+      </td>  
+  </tr>
+  <tr>  
+      <td>  
+          <button mat-raised-button color="accent" [disabled]="!studentForm.valid || isAccepted==0">Submit</button> &nbsp; 
+      </td> 
+  </tr>  
+  <tr> 
+</table>
+</form>
+
+  </mat-card-content>
+
+</mat-card>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- ---------------student Registrationform----------------
+
+<a routerLink="/view" >View</a>
+
+<form class="registrationform" [formGroup]="studentForm" (ngSubmit)="save()">
+
+  <h2>Student Registration Form</h2>
+
+  <table class="registration-table">
+ <tr>
+      <td>FirstName</td>
+      <td>
+        <input type="text" formControlName="firstName" required="required">
+      </td>
+    </tr>
+    <br>
+ <tr>
+        <td>LastName</td>
+        <td>
+          <input type="text" formControlName="lastName" required="required">
+        </td>
+      </tr>
+      <br>
+  <tr>
+          <td>Email</td>
+          <td>
+            <input type="text" formControlName="email" required="required">
+          </td>
+  </tr>
+  <br>
+  <tr>
+    
+    <tr>
+      <td>Password</td>
+      <td>
+        <input type="text" formControlName="password" required="required">
+      </td>
+</tr>
+<br>
+  <tr>
+          <td>Age</td>
+          <td>
+            <input type="number" formControlName="age" required="required">
+          </td>
+  </tr>
+  <br>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+  <td>
+<input class="savebtn" type="submit" value="Save">      
+
+  </td>
+</tr>
+  </table>
+</form> -->

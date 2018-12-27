@@ -1,0 +1,44 @@
+.registration-title{
+    text-align: center
+}
+.registration-table{
+    text-align: center;
+    margin: 2% 20% 0 20%;
+}
+.matcard-setting{
+    margin: 3% 40% 0 40%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.navbtn{
+    position: absolute;
+    float: right;
+    right: 702px;
+    top: 5px;
+}
+
+
+
+
+
+/* body{
+    margin: 0;
+    padding: 0;
+}
+h2{
+    padding: 10px;
+    text-align: center;
+}
+.registrationform{
+margin: 0% 35% 0% 35%;
+background-color: lightblue;
+}
+.firstname{
+    margin-top: 30px;
+}
+.registration-table{
+ margin: 50px 50px 50px 50px;   
+}
+.savebtn{
+    margin-bottom: 30px;
+} */

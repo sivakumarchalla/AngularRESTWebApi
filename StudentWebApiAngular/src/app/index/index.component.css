@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.tabledata{
+    width: 50%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 5% 26% 0 26%;
+}
+tr,td,th {
+    border: 1px solid black;
+    padding: 10px;
+}
+.button-move{
+    margin:2% 20% 0 20%;
+}
+.navbtn{
+    position: absolute;
+    float: right;
+    right: 420px;
+    top: 31px;
+}

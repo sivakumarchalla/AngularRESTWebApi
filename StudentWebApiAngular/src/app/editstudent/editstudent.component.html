@@ -1,0 +1,90 @@
+<!---------edit student Registrationform--------------->
+
+
+
+    <div class="main-container">
+        <button class="navbtn"  mat-raised-button color="salmon" routerLink="/view" >View Registrations</button> 
+    <mat-card class="matcard-setting">
+      <mat-card-title class="registration-title">
+        Student Registration Form 
+      </mat-card-title>
+    
+      <mat-card-content>
+       <div *ngIf="studentForm">
+          <form class="registrationform" [formGroup]="studentForm" (ngSubmit)="save()">
+     <table class="registration-table">
+        <tr>
+            <td>
+                <mat-form-field class="demo-full-width">  
+                    <input disabled formControlName="id" matInput placeholder="Id">  
+                </mat-form-field> 
+                <mat-error>  
+                    <span *ngIf="!studentForm.get('id').valid && studentForm.get('id').touched"></span>  
+                </mat-error>  
+            </td>
+          </tr>
+        <tr>
+           <td>
+            <mat-form-field class="demo-full-width">  
+                <input formControlName="firstName" matInput placeholder="First Name">  
+            </mat-form-field> 
+            <mat-error>  
+                <span *ngIf="!studentForm.get('firstName').valid && studentForm.get('firstName').touched">First Name requride</span>  
+            </mat-error>  
+           </td>
+       </tr>
+        <tr>
+            <td>  
+                <mat-form-field class="demo-full-width">  
+                    <input formControlName="lastName" matInput placeholder="Last Name">  
+                </mat-form-field>  
+                <mat-error>  
+                    <span *ngIf="!studentForm.get('lastName').valid && studentForm.get('lastName').touched">Last Name requride</span>  
+                </mat-error>  
+            </td>  
+       </tr>
+       <tr>  
+          <td>  
+              <mat-form-field class="demo-full-width">  
+                  <input formControlName="email" matInput placeholder="Email">  
+                  <mat-hint>use like : demo@demo.com</mat-hint>  
+                  <mat-error>  
+                      <span *ngIf="!studentForm.get('email').valid && studentForm.get('email').touched">invalid Email</span>  
+                  </mat-error>  
+              </mat-form-field>  
+          </td>  
+      </tr>
+      <tr>  
+          <td>  
+              <mat-form-field class="demo-full-width">  
+                  <input formControlName="password" matInput placeholder="Password">  
+                  <mat-error>  
+                      <span *ngIf="!studentForm.get('password').valid && studentForm.get('Password').touched">invalid Password</span>  
+                  </mat-error>  
+              </mat-form-field>  
+          </td>  
+      </tr>
+      <tr>  
+          <td>  
+              <mat-form-field class="demo-full-width">  
+                  <input formControlName="age" matInput placeholder="Age">  
+                  <mat-error>  
+                      <span *ngIf="!studentForm.get('age').valid && studentForm.get('age').touched">age required</span>  
+                  </mat-error>  
+              </mat-form-field>  
+          </td>  
+      </tr>
+      <tr>  
+          <td>  
+              <button mat-raised-button color="accent" [disabled]="!studentForm.valid || isAccepted==0">Submit</button> 
+          </td> 
+      </tr>  
+      <tr> 
+    </table>
+    </form>
+</div>
+      </mat-card-content>
+    
+    </mat-card>
+    
+    </div>
